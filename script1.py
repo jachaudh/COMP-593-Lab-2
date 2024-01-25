@@ -18,6 +18,11 @@ def main():
         ]
     }
 
+    
+    add_movie = {'title': 'The Godfather', 'genre': 'crime'}
+    about_me['movies'].append(add_movie)
+
+
     return
 
 if __name__ == '__main__':
