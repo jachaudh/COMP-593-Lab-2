@@ -34,10 +34,22 @@ def print_student_name_and_id(about_me):
 
    
 def add_pizza_toppings(about_me, toppings):
-    
+
     about_me['pizza_toppings'].extend(toppings)
     about_me['pizza_toppings'] = sorted(set(about_me['pizza_toppings']))
     about_me['pizza_toppings'] = [topping.upper() for topping in about_me['pizza_toppings']]
+    
+
+def print_pizza_toppings(toppings):
+
+    print("My favourite pizza toppings are:")
+    print("\n".join(f"- {topping}" for topping in toppings[:3]).upper())  
+    print("\nMy favourite pizza toppings are:")
+    additional_toppings = ['chicken', 'tomatoes', 'peperoni', 'letus']
+    print("\n".join(f"- {topping}" for topping in additional_toppings))
+    print()
+
+
 
 
 
