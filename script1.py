@@ -32,6 +32,14 @@ def print_student_name_and_id(about_me):
     print(f"My name is {full_name}, but you can call me Sir {first_name}.")
     print(f"My student ID is {student_id}.")
 
+   
+def add_pizza_toppings(about_me, toppings):
+    
+    about_me['pizza_toppings'].extend(toppings)
+    about_me['pizza_toppings'] = sorted(set(about_me['pizza_toppings']))
+    about_me['pizza_toppings'] = [topping.upper() for topping in about_me['pizza_toppings']]
+
+
 
     return
 
