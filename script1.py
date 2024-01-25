@@ -51,14 +51,17 @@ def print_pizza_toppings(toppings):
 
     
 def print_movie_genres(about_me):
-    
+
     genres = [movie['genre'] for movie in about_me['movies']]
     print(f"I like to watch {', '.join(genres)} movies.\n")
 
 
+def print_movie_titles(movie_list):
 
-
-
+    titles = [movie['title'].title() for movie in movie_list]
+    last_title = titles[-1]
+    titles[-1] = f"and {last_title}"  
+    print(f"My favourite movies are {', '.join(titles)}!\n")
 
     return
 
